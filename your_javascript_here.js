@@ -8,5 +8,14 @@ var hero = {
 };
 
 // Game logic
+function rest(creature) {
+  creature.health = 10;
+  return creature;
+}
+
+function pickUpItem(creature, item) {
+  inventory.push(item);
+  return creature;
+}
 
 // UI
