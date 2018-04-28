@@ -21,13 +21,22 @@ function pickUpItem(creature, item) {
 }
 
 function dealDamage(attacker, defender) {
-  var health == defender.health;
-  var damage == attacker.weapon.damage;
+  var health = defender.health;
+  var damage = attacker.weapon.damage;
 
   var newHealth = health - damage;
   defender.health.push(newHealth);
   return defender;
 }
+
+function equipWeapon (creature, index) {
+  var index = creature.inventory.indexOf(i);
+  var inventory = creature.inventory
+  creature.weapon = index;
+  creature.inventory = inventory.splice(i, 1);
+  return creature;
+}
+
 
 
 
