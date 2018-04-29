@@ -70,3 +70,7 @@ while (heroicCreature.health > 0 && creature.health > 0) {
 
 
 // UI
+var image = document.getElementById('onclick-image2');
+image.onclick = rest(event) {
+    console.log('I was resting');
+  }
