@@ -21,35 +21,46 @@ function pickUpItem(creature, item) {
 }
 
 function dealDamage(attacker, defender) {
-  console.log(attacker.weapon.damage)
-  console.log(defender.health)
-
   var newHealth = defender.health - attacker.weapon.damage
-console.log(newHealth)
-
 defender.health = newHealth;
-
-  console.log(defender.health)
-
-
-
   return defender;
 }
 
 function equipWeapon (creature, index) {
-  var index = creature.inventory.indexOf(i);
-  var inventory = creature.inventory
+index = [i];
+var weapon = creature.inventory.indexOf(index);
+console.log(test2)
+creature.weapon = weapon;
+console.log(test2)
 
-  console.log(inventory)
-
-  creature.weapon = index;
-  creature.inventory = inventory.splice(i, 1);
-  return creature;
+return creature
 }
 
 function doBattle (heroicCreature, creature) {
+  var heroicCreature
+  var heroic
 
+  if (heroicCreature != heroic) {
+    return null;
+  }
+
+while (heroicCreature.health > 0 && creature.health > 0) {
+  dealDamage(heroicCreature, creature);
+  return creature.health;
+  if (creature.health > 0) {
+    dealDamage(creature, heroicCreature);
+    return heroicCreature.health
+  }
+  else if (heroicCreature.health > 0) {
+    return heroicCreature.health
+  }
+    else {
+      window.prompt('Your hero is DEAD!!!!!');
+    }
+  }
 }
+
+
 
 //- `doBattle` is a function that takes two creatures, the first of which is a hero, which deal damage to each other until one of them dies.
 //  1. `doBattle` should have two parameters `heroicCreature` and `creature`. You can assume that both have the same structure as your `hero` object.
